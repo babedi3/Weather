@@ -54,7 +54,7 @@ function currentWeather() {
         refreshCities();
     }
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=07c552f8f1e1246a5f81897348610f86";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=07c552f8f1e1246a5f81897348610f86";
 
     $.ajax({
         url: queryURL,
