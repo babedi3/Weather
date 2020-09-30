@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainpage.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Weather Forecast</title>
+</head>
+
+<body style="background-color: #383d41">
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-fixed-top" style="background-color: #3153F3;">
+        <a class="navbar-brand" href="#">Weather</a>
+        <form class="form-inline mx-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchcity">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="button" id="btnSearchCity"
+                onclick="currentWeather()">Search</button>
+        </form>
+    </nav>
+
+    <div class="row main-container">
+
+        <div class="col-2" style="margin-right: 4.7rem; margin-left:2.5rem;">
+            <ul id='list-cities' class="list-group" style="cursor: pointer">
+            </ul>
+        </div>
+
+        <div class="col-0">
+            <div class="container">
+                <div class="weatherapp">
+                    <div class="weather-gradient"></div>
+                    <div class="date-container">
+                        <h2 class="currentday" id="currentday">Tuesday</h2><span class="currentdate" id="currentdate">15
+                            Jan
+                            2019</span><i class="location-icon" data-feather="map-pin"></i><span class="location"
+                            id="selectedcity">Paris</span>
+                    </div>
+                    <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+                        <h1 class="temperature" id="temp">29°C</h1>
+                        <h3 class="weather-desc">Sunny</h3>
+                    </div>
+                </div>
+                <div class="info-side">
+                    <div class="today-info-container">
+                        <div class="today-info">
+                            <div class="precipitation"> <span class="title">UV Index</span><span class="value"
+                                    id="uvindex">0</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="humidity"> <span class="title">HUMIDITY</span><span class="value"
+                                    id="humidity">34
+                                    %</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="wind"> <span class="title">WIND</span><span class="value" id="windspeed">0
+                                    km/h</span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="week-container">
+                        <ul class="week-list">
+                            <li class="active" style="background-color: #e6e6e6"><i class="day-icon"
+                                    data-feather="sun"></i><span class="day-name" id="day0name">Tue</span><span
+                                    class="day-temp" id="day0">29°C</span></li>
+                            <li><i class="day-icon" data-feather="cloud"></i><span class="day-name"
+                                    id="day1name">Wed</span><span class="day-temp" id="day1">21°C</span></li>
+                            <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name"
+                                    id="day2name">Thu</span><span class="day-temp" id="day2">08°C</span></li>
+                            <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name"
+                                    id="day3name">Fri</span><span class="day-temp" id="day3">19°C</span></li>
+                            <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name"
+                                    id="day4name">Sat</span><span class="day-temp" id="day4">19°C</span></li>
+                            <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name"
+                                    id="day5name">Sun</span><span class="day-temp" id="day5">19°C</span></li>
+                            <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name"
+                                    id="day6name">Mon</span><span class="day-temp" id="day6">19°C</span></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="mainpage.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
